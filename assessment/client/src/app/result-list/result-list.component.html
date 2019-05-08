@@ -1,0 +1,22 @@
+<hr>
+<!-- <div ng-if="result"> <h4 class="mb-1">&nbsp;Analytics and Tracking</h4></div> -->
+<!-- <div class="btn-group pull-right">
+  <button type="button" class="btn btn-default active">Newest</button>
+  <button type="button" class="btn btn-default">Votes</button>
+  <button type="button" class="btn btn-default">Views</button>
+</div> -->
+<div class="list-group">
+  <div *ngFor="let items of result">
+    <div  class="card-header"><b>{{items.categories}}</b></div>
+    <div *ngFor="let item of items.data,let i = index">
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{item.name}}</h5>
+          <small>sdsdg</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+    </div>
+  </div>
+</div>

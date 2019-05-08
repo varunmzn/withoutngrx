@@ -1,0 +1,12 @@
+
+<ng-container *ngIf="layoutName == 'default'; else layoutOne">
+    <router-outlet></router-outlet>
+</ng-container>
+
+<ng-template #layoutOne>
+    <ng-container *ngIf="layoutName == 'layoutOne' else layoutTwo">
+        <app-header></app-header>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </ng-container>
+</ng-template>
